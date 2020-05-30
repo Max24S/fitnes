@@ -24,7 +24,7 @@ Route::name('admin.')
     ->namespace('Admin')
     ->prefix('admin')
     ->group(function () {
-        Route::view('/','admin.super.index');
+        Route::view('/','admin.index');
         Route::resource('user', 'UserController');
         Route::put("user/{user} ",'UserController@update');
     });
