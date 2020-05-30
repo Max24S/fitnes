@@ -20,5 +20,12 @@ Route::get('/', function () {
 Route::get('/client','ClientController@main');
 
 Auth::routes();
-
+Route::name('admin.')
+    ->namespace('Admin')
+    ->prefix('admin')
+    ->group(function () {
+        Route::view('/','admin.super.index');
+        Route::resource('user', 'UserController');
+        Route::put("user/{user} ",'UserController@update');
+    });
 Route::get('/home', 'HomeController@index')->name('home');
