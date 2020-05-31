@@ -5,20 +5,64 @@
  */
 
 require('./bootstrap');
-
+import PhoneNumber from 'awesome-phonenumber'
 window.Vue = require('vue');
 import Vue from 'vue'
 import VeeValidate from 'vee-validate'
 import Toaster from 'v-toaster'
 import 'v-toaster/dist/v-toaster.css'
-
+import { Validator } from 'vee-validate';
+import ru from 'vee-validate/dist/locale/ru';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+
 Vue.use(Toaster, {timeout: 5000});
-Vue.use(VeeValidate);
+// const phoneNumber = {
+//     getMessage: field => `${field} Не є дійсним номером телефону`,
+//     validate (number) {
+//         return new Promise(resolve => {
+//             let phone = new PhoneNumber( number,mobile);
+//             resolve({ valid: phone.isValid() })
+//         })
+//     }
+// }
+
+Vue.use(VeeValidate, {
+    fieldsBagName: 'veeFields',
+    locale: 'ukr',
+    dictionary: {
+        ukr: {
+            messages:{
+                confirmed: 'Паролі не совдают',
+                required:'Поле не може залишатися порожнім',
+                alpha:"Поле може містити лише алфавітні символи",
+                max: 'Перевищує ліміт',
+                excluded:'Виберіть дані',
+                email:"Поле електронної пошти має бути дійсним"
+            },
+            attributes:{
+                surname:" ",
+                name:" ",
+                patronymic:" ",
+                email:' ',
+                address:" ",
+                role:" ",
+                sex:" ",
+                number:" ",
+                'confirm-password': " ",
+                password: " ",
+            }
+        },
+
+    }
+});
+// Validator.extend('phoneNumber', phoneNumber)
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

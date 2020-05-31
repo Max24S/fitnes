@@ -8,9 +8,9 @@
         data() {
             return {
                 routes:{
-                    Create:'/admin/super/user/create',
-                    Edit:'/admin/super/user/',
-                    Delete:'/admin/super/user/'
+                    Create:'/admin/user/create',
+                    Edit:'/admin/user/',
+                    Delete:'/admin/user/'
                 },
                 fields: [
                     { key: 'id',label: 'id', sortable: true,sortDirection: 'desc', class: 'text-center' },
@@ -20,7 +20,6 @@
                     { key: 'email', label: 'email', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'number', label: 'Номер телефона', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'address', label: 'Адресс', sortable: true, sortDirection: 'desc',class: 'text-center' },
-                    { key: 'birthday', label: 'Дата рождения', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'sex', label: 'Пол', sortable: true, sortDirection: 'desc' ,class: 'text-center'},
                     { key: 'role', label: 'Роль', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'actions', label: 'Действия' }

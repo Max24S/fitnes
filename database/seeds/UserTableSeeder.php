@@ -19,6 +19,8 @@ class UserTableSeeder extends Seeder
                 'email'=>'gurax45@gmail.com',
                 'password'=>\Illuminate\Support\Facades\Hash::make('qwerty777'),
                 'number'=>'3805642352',
+                'address'=>'admin',
+                'sex'=>'Мужчина',
                 'role'=>'Адмін'
             ]
         ];
