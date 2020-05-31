@@ -25,7 +25,7 @@ Route::name('admin.')
     ->prefix('admin')
     ->group(function () {
         Route::view('/','admin.index');
-        Route::resource('user', 'UserController');
-        Route::put("user/{user} ",'UserController@update');
+        Route::get('create-user', 'UserController@create');
+//        Route::put("user/{user} ",'UserController@update');
     });
 Route::get('/home', 'HomeController@index')->name('home');

@@ -53,7 +53,7 @@
                 @yield('table')
             </main>
             <footer>
-                <footer-component></footer-component>
+{{--                <footer-component></footer-component>--}}
             </footer>
         </div>
     </div>

@@ -5,7 +5,8 @@ window._ = require('lodash');
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
  */
-
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');

@@ -7,7 +7,18 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import Vue from 'vue'
+import VeeValidate from 'vee-validate'
+import Toaster from 'v-toaster'
+import 'v-toaster/dist/v-toaster.css'
 
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+Vue.use(Toaster, {timeout: 5000});
+Vue.use(VeeValidate);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
